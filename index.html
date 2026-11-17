@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Maths Learning AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="topbar">
+        <a class="brand" href="#">
+            <span class="brand-icon">🧠</span>
+            <span>
+                Smart Maths
+                <small>Learning AI</small>
+            </span>
+        </a>
+
+        <div class="top-actions">
+            <label for="language">🌐</label>
+            <select id="language">
+                <option value="hi">हिंदी</option>
+                <option value="en">English</option>
+            </select>
+            <button id="soundToggle">🔊</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow" id="welcomeTag">
+                    खेलो और गणित सीखो!
+                </span>
+
+                <h1 id="heroTitle">
+                    गणित अब होगा
+                    <span>मज़ेदार!</span> 🎉
+                </h1>
+
+                <p id="heroText">
+                    पहाड़े सीखें, सवाल हल करें और
+                    हर दिन बनें Maths Champion!
+                </p>
+
+                <button class="primary-btn" id="startBtn">
+                    चलो शुरू करें →
+                </button>
+            </div>
+
+            <div class="hero-art">
+                <div class="orbit">＋</div>
+                <div class="mascot">🦉</div>
+                <span class="float f1">7 × 8</span>
+                <span class="float f2">⭐</span>
+                <span class="float f3">÷</span>
+            </div>
+        </section>
+
+        <!-- Score Section -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-icon purple">🏆</span>
+                <div>
+                    <strong id="score">0</strong>
+                    <small id="scoreLabel">कुल अंक</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon yellow">⭐</span>
+                <div>
+                    <strong id="stars">0</strong>
+                    <small id="starsLabel">सितारे</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon green">📝</span>
+                <div>
+                    <strong id="answered">0</strong>
+                    <small id="answeredLabel">हल किए सवाल</small>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Learning Options -->
+        <section class="section" id="learning">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">अपना पाठ चुनें</span>
+                    <h2 id="chooseTitle">
+                        आज क्या सीखेंगे?
+                    </h2>
+                </div>
+                <span class="heading-emoji">📚</span>
+            </div>
+
+            <div class="lesson-grid">
+
+                <button class="lesson-card tables"
+                    data-mode="tables">
+                    <span class="lesson-emoji">🔢</span>
+                    <span class="lesson-title" id="tablesTitle">
+                        पहाड़े
+                    </span>
+                    <small>1 से 30 तक</small>
+                    <span class="card-arrow">→</span>
+                </button>
+
+                <button class="lesson-card addition"
+                    data-mode="add">
+                    <span class="lesson-emoji">➕</span>
+                    <span class="lesson-title" id="addTitle">
+                        जोड़
+                    </span>
+                    <small>संख्याएँ जोड़ें</small>
+                    <span class="card-arrow">→</span>
+                </button>
+
+                <button class="lesson-card subtraction"
+                    data-mode="subtract">
+                    <span class="lesson-emoji">➖</span>
+                    <span class="lesson-title" id="subTitle">
+                        घटाना
+                    </span>
+                    <small>अंतर निकालें</small>
+                    <span class="card-arrow">→</span>
+                </button>
+
+                <button class="lesson-card multiplication"
+                    data-mode="multiply">
+                    <span class="lesson-emoji">✖️</span>
+                    <span class="lesson-title" id="mulTitle">
+                        गुणा
+                    </span>
+                    <small>गुणा करना सीखें</small>
+                    <span class="card-arrow">→</span>
+                </button>
+
+                <button class="lesson-card division"
+                    data-mode="divide">
+                    <span class="lesson-emoji">➗</span>
+                    <span class="lesson-title" id="divTitle">
+                        भाग
+                    </span>
+                    <small>बराबर बाँटना सीखें</small>
+                    <span class="card-arrow">→</span>
+                </button>
+
+                <button class="lesson-card quiz"
+                    data-mode="quiz">
+                    <span class="lesson-emoji">🎯</span>
+                    <span class="lesson-title" id="quizTitle">
+                        Maths Quiz
+                    </span>
+                    <small>अपना ज्ञान परखें</small>
+                    <span class="card-arrow">→</span>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- Practice Area -->
+        <section class="workspace hidden" id="workspace">
+
+            <div class="workspace-head">
+                <button class="back-btn" id="backBtn">
+                    ← वापस
+                </button>
+                <span class="eyebrow">
+                    आपका अभ्यास
+                </span>
+            </div>
+
+            <div id="activityContent"></div>
+
+        </section>
+
+        <!-- Learning Tip -->
+        <section class="tip-banner">
+            <span>💡</span>
+
+            <div>
+                <strong id="tipTitle">आज की सीख</strong>
+                <p id="tipText">
+                    रोज़ थोड़ा अभ्यास करने से
+                    गणित आसान हो जाता है।
+                </p>
+            </div>
+
+            <button id="tipSpeak">🔊</button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <span>Made with 💜 for little learners</span>
+        <span>
+            Smart Maths Learning AI
+            · <span id="year"></span>
+        </span>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
